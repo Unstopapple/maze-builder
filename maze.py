@@ -1,5 +1,3 @@
-from graphics import *
-
 
 class Maze:
 	def __init__(self, win):
@@ -7,13 +5,13 @@ class Maze:
 		self.cells = []
 		self.current = []
 		self.next = []
-		self.wall = {"top": True, "bottom": True, "left": True, "right": True}
+		self._wall = {"top": True, "bottom": True, "left": True, "right": True}
 
 	def _toggle_wall(self, direction=''):
-		if self.wall[direction]:
-			self.wall[direction] = False
+		if self._wall[direction]:
+			self._wall[direction] = False
 		else:
-			self.wall[direction] = True
+			self._wall[direction] = True
 
 	def make_cell(self):
 		pass
